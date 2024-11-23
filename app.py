@@ -11,8 +11,8 @@ chatbot = ChatBot("CollegeBot")
 # Train the chatbot with Dataset.txt if it exists
 trainer = ListTrainer(chatbot)
 
-if os.path.exists("src/Dataset.txt"):
-    with open("src/Dataset.txt", "r") as f:
+if os.path.exists("Dataset.txt"):
+    with open("Dataset.txt", "r") as f:
         conversation_data = f.readlines()
     trainer.train(conversation_data)
 else:
